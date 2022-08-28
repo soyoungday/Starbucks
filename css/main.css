@@ -4,7 +4,7 @@
 body{
     color: #333;
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
 }
@@ -14,11 +14,11 @@ img{display: block;}
 
 /* 버튼 공통 */
 .btn{
-    width: 130px; padding: 10px;
+    width: 100px; padding: 10px;
     border: 2px solid #333; border-radius: 4px;
-    color: #333; font-size: 16px; font-weight: 700;
+    color: #333; font-size: 14px; font-weight: 700;
     text-align: center; cursor: pointer; box-sizing:border-box;
-    display: block;transition: all 0.4s;
+    display: inline-block;transition: all 0.4s;
 }
 
 .btn:hover{background: #333; color: #fff; text-decoration: underline;}
@@ -28,16 +28,21 @@ img{display: block;}
 .btn--reverse:hover{background: transparent; color: #333;}
 
 /* 그린색 버튼 */
-.btn--green{background: #00704a; color: #fff; border: 2px solid #00704a;}
-.btn--green:hover{background: transparent; color: #00704a;}
+.btn--green{background: #00704a; color: #fff; border: 2px solid #00704a;margin-right: 8px ;}
+.btn--green:hover{text-decoration: underline;background: #00704a;}
 
 /* 골드버튼 */
-.btn--gold{color: #d9aa8a;border-color: #d9aa8a;}
-.btn--gold:hover{color: #fff;background: #d9aa8a;}
+.btn--gold{color: #b9813e;border-color: #b9813e;}
+.btn--gold:hover{color: #fff;background: #b9813e;}
+
 
 /* 화이트버튼 */
 .btn--white{color: #fff;border-color: #fff;}
 .btn--white:hover{color: #C1D42E;background: #fff; }
+.btn--white-line{border-color: #fff; color: #fff; background: #1e3932;}
+.btn--white-line:hover{text-decoration: underline;background: #1e3932;}
+.btn--white-line-egift{ width: 210px; color: #fff;border-color: #fff; background: #1e3932;}
+.btn--white-line-egift:hover{ text-decoration: underline;background: #1e3932;}
 
 /* =================spay================= */
 .back-to-position{opacity: 1; transition: all 1s;}
@@ -118,7 +123,7 @@ header nav ul.main-menu li.item .contents_texture p{color: #669900; margin: 4px 
 
 
 /* mian visual Area------------------------------------ */
-.visual{background: url(../images/2022_Summer2_main_bg.jpg) no-repeat; margin-top: 120px; background-position: center;}
+.visual{ width: 100%; background: url(../images/2022_Summer2_main_bg.jpg) no-repeat; margin-top: 120px; background-position: center; background-size: cover;}
 .visual .inner{height: 646px;}
 .visual .title{position: absolute; top: 200px; left: -100px;}
 .visual .title .btn{position: absolute;top: 259px; left: 173px;}
@@ -131,17 +136,17 @@ header nav ul.main-menu li.item .contents_texture p{color: #669900; margin: 4px 
 
 /* 공지사항 Area------------------------------------------------ */
 .notice .notice-line{position: relative;}
-.notice .notice-line .bg-left{position: absolute; top: 0; left: 0; width: 50%; height: 100; background: #000;}
-.notice .notice-line .bg-right{position: absolute; top: 0; left: 0; width: 50%; height: 100; background: #f6f5ef;}
+.notice .notice-line .bg-left{position: absolute;top: 0;left: 0;width: 50%;height: 100%;background: #000;}
+.notice .notice-line .bg-right{position: absolute;top: 0;right: 0;width: 50%;height: 100%;background: #f6f5ef;}
 
-.notice .notice-line .inner{height: 62px; display:flex;}
+.notice .notice-line .inner{height: 62px;display: flex;}
 
 /* 왼쪽 */
-.notice .notice-line .inner .inner__left{width: 50%; height: 100%; background: #000; display:flex; align-items: center;}
-.notice .notice-line .inner .inner__left h2{color: #fff; font-size: 17px; margin-right: 20px;}
-.notice .notice-line .inner .inner__left .swiper{flex: 1; height: 62px; display: flex;}
-
-.notice .notice-line .inner .inner__left .swiper .swiper-slide{height: 62px; display: flex; align-items: center;}
+.notice .notice-line .inner .inner__left{width: 50%;height:100%;background:#000;display: flex;align-items: center;}
+.notice .notice-line .inner .inner__left h2{color: #fff;font-size: 17px;margin-right: 20px;}
+.notice .notice-line .inner .inner__left .swiper{flex: 1;height: 62px;display: flex;}
+/* flex1은 flex-grow(늘려주는속성)와 같다 */
+.notice .notice-line .inner .inner__left .swiper .swiper-slide{height: 62px;display: flex;align-items: center;}
 .notice .notice-line .inner .inner__left .swiper .swiper-slide a{color: #fff;}
 
 .notice .notice-line .inner .inner__left .notice-line__more{display: flex;width: 62px;height: 62px;justify-content: center;align-items: center;}
@@ -157,10 +162,13 @@ header nav ul.main-menu li.item .contents_texture p{color: #669900; margin: 4px 
 /* promotion안에 있는 swiper 슬라이드 */
 .notice .promotion{height: 693px;background: #f6f5ef;position: relative;overflow: hidden;transition: height 0.4s;}
 
+/* toggle버튼으로 class를 뗏다 붙였다 하는 스크립트 */
 .notice .promotion.hide{height: 0;}
 
+/* 819 * 3 + 20 =  2477*/
 .notice .promotion .swiper{width: calc(819px * 3 + 20px);height: 600px;top: 40px;left: 50%;margin-left: calc((819px * 3 + 20px) / -2);}
 
+/* 이미지 투명도 적용 */
 .notice .promotion .swiper .swiper-slide{opacity: 0.5;transition: opacity 1s;position: relative;width: 819px;}
 .notice .promotion .swiper .swiper-slide-active{opacity: 1;}
 
@@ -181,8 +189,47 @@ header nav ul.main-menu li.item .contents_texture p{color: #669900; margin: 4px 
 .notice .promotion .swiper-next:hover{background: #333;color: #fff;}
 
 /* REWARDS Area---------------------------------------- */
-.rewards{position: relative;}
-.rewards .bg-left{width: 50%;height: 100%;position: absolute;top: 0;left: 0;background: #272727;}
-.rewards .bg-right{width: 50%;height: 100%;position: absolute;top: 0;right: 0;}
+.rewards{padding-top: 30px; padding-bottom: 25px;background:#1E3932;}
+.rewards .inner{max-width: 1080px; margin: 0 auto;}
+.rewards .inner .new-rewards_logo{float: left; width: 16.3%; margin-left: 40px; margin-right: 40px; text-align: center;}
+.rewards .inner .new-rewards_logo img{width: 176px;}
+.rewards .inner .new-rewards_conts{ box-sizing:border-box; color: #fff; padding-left: 129px;letter-spacing:0.5px;}
+.rewards .inner .new-rewards_conts .info-cont{position: relative; margin-bottom: 22px; border-bottom: 1px solid #4b615b;}
+.rewards .inner .new-rewards_conts .info-cont .info-cont_txt{margin-bottom: 12px;}
+.rewards .inner .new-rewards_conts .info-cont .info-cont_txt h2{line-height: 1.4; margin-bottom: 12px;font-size: 26px;font-weight: normal;}
+.rewards .inner .new-rewards_conts .info-cont .info-cont_txt strong{font-weight: bold;}
+.rewards .inner .new-rewards_conts .info-cont .info-cont_txt p{line-height: 1.4; font-size: 17px;}
+.rewards .inner .new-rewards_conts .info-cont .info-cont_txt p strong{font-weight: bold;}
+.rewards .inner .new-rewards_conts .info-cont .btn-signin_group{position: absolute; bottom: 20px; right: 0;}
+.rewards .inner .new-rewards_conts .gift-cont{position: relative; margin-bottom: 22px;}
+.rewards .inner .new-rewards_conts .gift-cont p{line-height: 1.4; font-size: 14px;}
+.rewards .inner .new-rewards_conts .gift-cont p strong{font-weight: bold;}
+.rewards .inner .new-rewards_conts .gift-cont .btn_egift{position: absolute; bottom: 0px; right: 0;}
 
-.rewards .inner{background:#1E3932;height: 241px;}
+
+
+/* SEASON PRODUCT */
+.main-bean_wrap {position: relative; height: 572px; background: url(../images/2022_Summer2_bean_bg.jpg); background-size: cover;}
+.main-bean_wrap .inner{width: 1100px;position: relative;min-width: 1100px;margin: auto; top: 80px;}
+.main-bean_wrap .inner .bean_img_box{}
+.main-bean_wrap .inner .bean_img_box img{vertical-align: top;}
+
+.main-bean_wrap .inner .bean_txt_box{position: absolute; top: 110px; right: 30px;}
+.main-bean_wrap .inner .bean_txt_box img{margin-bottom: 40px;}
+.main-bean_wrap .inner .bean_txt_box .btn--white{position: absolute;right: 370px;}
+
+
+
+/* RESERVE COFFEE------------------------------------ */
+.reserve-coffee_wrap {position: relative; height: 400px; background: url(../images/reserve_2022_rwanda_sholi_bg_with_cup.jpg) center no-repeat; background-size: cover; }
+.reserve-coffee_wrap .inner{position: relative;width: 1100px;margin: auto;}
+.reserve-coffee_wrap .reserve_title img{position: absolute; padding-top: 115px;margin-right: auto; box-sizing: border-box;left: 0;}
+.reserve-coffee_wrap::before {content: url(../images/reserve_2022_rwanda_sholi_bg_left.png);position: absolute; left: 0; top: 0;}
+.reserve-coffee_wrap::after {content: url(../images/reserve_2022_rwanda_sholi_bg_right.png);position: absolute; right: 0; top: 0;}
+
+.reserve-coffee_wrap .btn--gold{position: absolute;margin-top: 270px;box-sizing: border-box;margin-left:275px;}
+
+
+/* PICK YOUR FAVORITE------------------------------------ */
+.pick-your-favorite{background: url(../images/favorite_bg.jpg) center center fixed no-repeat; background-size: auto 100%; height: 800px; padding: 0; position: relative; }
+.pick-your-favorite .inner .text-group{ width: 360px;}
