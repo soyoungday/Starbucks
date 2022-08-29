@@ -14,7 +14,7 @@ img{display: block;}
 
 /* 버튼 공통 */
 .btn{
-    width: 100px; padding: 10px;
+    width: 120px; padding: 10px;
     border: 2px solid #333; border-radius: 4px;
     color: #333; font-size: 14px; font-weight: 700;
     text-align: center; cursor: pointer; box-sizing:border-box;
@@ -48,7 +48,7 @@ img{display: block;}
 .back-to-position{opacity: 1; transition: all 1s;}
 
 /* 왼 => 오 */
-.back-to-position.to-right{transform: translateX(150px);}
+.back-to-position.to-right{transform: translateX(-150px);}
 
 /* 오 => 왼 */
 .back-to-position.to-left{transform: translateX(150px);}
@@ -207,22 +207,32 @@ header nav ul.main-menu li.item .contents_texture p{color: #669900; margin: 4px 
 .rewards .inner .new-rewards_conts .gift-cont .btn_egift{position: absolute; bottom: 0px; right: 0;}
 
 
-
 /* SEASON PRODUCT */
-.main-bean_wrap {position: relative; height: 572px; background: url(../images/2022_Summer2_bean_bg.jpg); background-size: cover;}
+/* .main-bean_wrap {position: relative; height: 572px; background: url(../images/2022_Summer2_bean_bg.jpg);}
 .main-bean_wrap .inner{width: 1100px;position: relative;min-width: 1100px;margin: auto; top: 80px;}
 .main-bean_wrap .inner .bean_img_box{}
 .main-bean_wrap .inner .bean_img_box img{vertical-align: top;}
 
 .main-bean_wrap .inner .bean_txt_box{position: absolute; top: 110px; right: 30px;}
 .main-bean_wrap .inner .bean_txt_box img{margin-bottom: 40px;}
-.main-bean_wrap .inner .bean_txt_box .btn--white{position: absolute;right: 370px;}
+.main-bean_wrap .inner .bean_txt_box .btn--white{position: absolute;right: 370px;} */
+
+
+
+/* SEASON PRODUCT */
+.main-bean_wrap {position: relative; background: url(../images/2022_Summer2_bean_bg.jpg) no-repeat; background-size: cover; }
+.main-bean_wrap .inner{height: 572px;}
+
+.main-bean_wrap .inner .bean_img_box{position: absolute; top: 100px; left: 300px}
+
+.main-bean_wrap .inner .bean_txt_box{position: absolute; top: 160px; right: 100px;}
+.main-bean_wrap .inner .bean_txt_box img{margin-bottom: 40px;}
+.main-bean_wrap .inner .bean_txt_box .btn--white{position: absolute;right:70px;}
 
 
 
 /* RESERVE COFFEE------------------------------------ */
-.reserve-coffee_wrap {position: relative; height: 400px; background: url(../images/reserve_2022_rwanda_sholi_bg_with_cup.jpg) center no-repeat; background-size: cover; }
-.reserve-coffee_wrap .inner{position: relative;width: 1100px;margin: auto;}
+.reserve-coffee_wrap {position: relative; height: 400px; background: url(../images/reserve_2022_rwanda_sholi_bg_with_cup.jpg) no-repeat center ;background-size: cover;}
 .reserve-coffee_wrap .reserve_title img{position: absolute; padding-top: 115px;margin-right: auto; box-sizing: border-box;left: 0;}
 .reserve-coffee_wrap::before {content: url(../images/reserve_2022_rwanda_sholi_bg_left.png);position: absolute; left: 0; top: 0;}
 .reserve-coffee_wrap::after {content: url(../images/reserve_2022_rwanda_sholi_bg_right.png);position: absolute; right: 0; top: 0;}
@@ -231,5 +241,74 @@ header nav ul.main-menu li.item .contents_texture p{color: #669900; margin: 4px 
 
 
 /* PICK YOUR FAVORITE------------------------------------ */
-.pick-your-favorite{background: url(../images/favorite_bg.jpg) center center fixed no-repeat; background-size: auto 100%; height: 800px; padding: 0; position: relative; }
-.pick-your-favorite .inner .text-group{ width: 360px;}
+.pick-your-favorite{background: url(../images/favorite_bg.jpg) center fixed no-repeat; background-size: auto 100%; height: 800px; padding: 0; position: relative; }
+.pick-your-favorite .inner { padding: 170px 0;}
+.pick-your-favorite .inner .text-group{ width: 360px; margin-left: 100px;display: flex;flex-wrap: wrap; justify-content: flex-end;}
+.pick-your-favorite .inner .text-group .pick_img{position: absolute; padding-top: 115px;margin-right: auto; box-sizing: border-box;left: 650px;top:20px;}
+.pick-your-favorite .inner .text-group .description{margin-top: 30px;}
+.pick-your-favorite .inner .text-group .btn--white{margin-top: 30px;}
+
+
+/* RESERVE STORE------------------------------------ */
+.reserve-store{height:400px; background: url(../images/reserve_bg_pc.png) center no-repeat; margin-top: 20px;position: relative;}
+.reserve-store .inner{padding: 110px 0;}
+.reserve-store .inner .text{width: 100%; position:relative;}
+.reserve-store .inner .text .btn{margin-top: 50px; margin-left: 600px;}
+.reserve-store .inner .front{position: absolute; margin-right: auto; box-sizing: border-box;left: 850px; top:20px;width: 100%;}
+
+
+/* FIND THE STORE------------------------------------ */
+.find-the-store{background: url(../images/find_store_bg.jpg);}
+.find-the-store .inner{height: 400px;}
+
+
+
+
+/* 매장이미지 */
+.find-the-store .inner .picture{position: absolute;}
+.find-the-store .inner .pic1{top: 0;left: 150px;}
+.find-the-store .inner .pic2{top: 150px;left: 400px;}
+
+/* 원두, 매장 일러스트 이미지 */
+.find-the-store .inner .texture1{position: absolute;top: 0;left: 400px;}
+.find-the-store .inner .texture2{position: absolute;bottom: 0;right: 0;}
+
+/* text-group */
+.find-the-store .inner .text-group{position: absolute;top: 120px;left: 550px;}
+.find-the-store .inner .text-group .discription{margin: 20px 0;}
+
+/* AWARDS--------------------------------------------- */
+.awards{background: #272727;}
+.awards .inner{padding: 10px 0;}
+.awards .inner .swiper .swiper-wrapper{height: 40px;}
+.awards .inner .swiper .swiper-wrapper .swiper-slide {width:200px;}
+
+
+
+/* footer---------------------------------------- */
+footer{background: #272727;color: #ccc;min-width: 1100px;margin: auto;}
+footer .inner{padding: 40px 0 60px;min-width: 1100px;background: #272727;}
+
+/* 개인정보처리방침 메뉴 */
+footer .inner ul.menu{display: flex;justify-content: center;}
+footer .inner ul.menu li{position: relative;}
+footer .inner ul.menu li::before{content: "";width: 3px;height: 3px;background: #555;position: absolute;top: 0;bottom: 0;margin: auto;display: block;}
+footer .inner ul.menu li:first-child::before{display: none;}
+footer .inner ul.menu li a{display: block;padding: 15px;font-size: 12px;font-weight: 700;}
+footer .inner ul.menu li:first-child a{color: #669900;}
+
+/* 찾아오시는길 버튼 */
+footer .inner .btn-group{display: flex;justify-content: center;padding: 20px 0 40px;}
+footer .inner .btn-group a:nth-child(2){margin: 0 10px;}
+
+/* 주소 */
+footer .inner address,
+footer .inner p{text-align: center;color: #999;font-size: 12px;margin-bottom: 15px;}
+
+/* 하단로고 */
+footer .inner .bottom-logo{margin: 30px auto 0;}
+
+/* to-top 버튼 */
+#to-top{position: fixed;bottom: 30px;right: 30px;z-index: 100;width: 40px;height: 40px;border: 2px solid #fff;padding: 20px;border-radius: 10px;background: #333;display: flex;justify-content: center;align-items: center;cursor: pointer;}
+
+#to-top .material-icons{color: #fff;font-size: 25px;}
