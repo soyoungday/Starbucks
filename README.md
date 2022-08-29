@@ -4,7 +4,6 @@
 
 [![스타벅스](./favicon.ico)](https://github.com/soyoungday/Start-project/blob/master/images/starbucks_logo.png)
 
-[![적을내용](이미지 경로)(링크주소)(깃페이지주소)
 
 
 # 프로젝트명 : Stabucks Clone Coding
