@@ -1,4 +1,4 @@
-![favicon.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4dcc1dff-7419-49d1-9b03-2c6df8d811f5/favicon.png)
+[![스타벅스](https://soyoungday.github.io/Starbucks/favicon.ico)](https://github.com/soyoungday/Starbucks.git)
 
 # **프로젝트명 : Stabucks Clone Coding**
 
